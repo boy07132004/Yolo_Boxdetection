@@ -43,7 +43,7 @@ def image_detection(network, class_names, class_colors, thresh):
     for _ in range(5):cap.read()
     image = cap.read()[1]
     # Uncomment next line for local image detection
-    image = cv2.imread("test.jpg")
+    #image = cv2.imread("test.jpg")
     image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     cap.release()
     
@@ -71,8 +71,13 @@ def main():
         box1,box2 = box_count(detections)
         _lora.send(f"Area1: {box1}, Area2: {box2}")
         print(box1,box2)
-        print("Press 'Enter' to Continue")
-        a= input()
+        
+        # Enter to continue
+        #print("Press 'Enter' to continue")
+        #a= input()
+        # Sleep 1 hour
+        print("Sleep 1 hour......")
+        time.sleep(3600)
 
 
 if __name__ == "__main__":
