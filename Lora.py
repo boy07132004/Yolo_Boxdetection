@@ -34,7 +34,7 @@ class lora:
         
         
 if __name__ == "__main__" :
-    _lora = lora(init=True)
+    _lora = lora(init=False)
     for _ in range(10): _lora.send("send to 713")
     _lora.close()
     
